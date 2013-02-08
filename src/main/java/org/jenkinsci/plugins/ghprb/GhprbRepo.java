@@ -39,6 +39,7 @@ public class GhprbRepo {
 		this.trigger = trigger;
 		reponame = user + "/" + repository;
 		String accessToken = trigger.getDescriptor().getAccessToken();
+		Logger.getLogger(GhprbRepo.class.getName()).log(Level.SEVERE, "fooooooo");
 		if(accessToken != null && !accessToken.isEmpty()) {
 			try {
 				if(!githubServer.equals("github.com")){
