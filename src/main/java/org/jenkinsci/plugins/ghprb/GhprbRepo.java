@@ -44,6 +44,7 @@ public class GhprbRepo {
 				if(!githubServer.equals("github.com")){
 					githubServer = githubServer +"/api/v3/";
 				}
+				Logger.getLogger(GhprbRepo.class.getName()).log(Level.SEVERE, "server:"+githubServer);
 				gh = GitHub.connectUsingOAuth(githubServer, accessToken);
 			} catch(IOException e) {
 				Logger.getLogger(GhprbRepo.class.getName()).log(Level.SEVERE, "can't connect using oauth", e);
